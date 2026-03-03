@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Landing — Find Your Properties</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body >
+    <!-- Page shell -->
+    <main class="min-h-screen px-4 py-10">
+      <div class="mx-auto max-w-6xl rounded-[28px] bg-[#F5F6FB] shadow-xl overflow-hidden">
+        <!-- Top nav -->
+        <header class="px-6 lg:px-10 pt-6">
+          <div class="flex items-center justify-between">
+            <nav class="hidden md:flex items-center gap-7 text-sm text-slate-600">
+              <a class="hover:text-slate-900" href="#home">Home</a>
+              <a class="hover:text-slate-900" href="#about">About</a>
+              <a class="hover:text-slate-900" href="#services">Service</a>
+              <a class="hover:text-slate-900" href="#property">Property</a>
+              <a class="hover:text-slate-900" href="#contact">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-2">
+              <div class="h-9 w-9 rounded-full bg-[#2F36A6] grid place-items-center">
+                <div class="h-4 w-4 rounded-full border-2 border-white/80"></div>
+              </div>
+              <span class="font-semibold text-slate-700">Logo</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <a
+                href="tel:+8001891427078"
+                class="hidden sm:inline-flex items-center gap-2 rounded-xl bg-[#2F36A6] px-4 py-2 text-sm font-semibold text-white hover:brightness-95"
+              >
+                <span class="inline-block">📞</span>
+                <span>+800 1891 427 078</span>
+              </a>
+
+              <button
+                id="mobileMenuBtn"
+                class="md:hidden h-10 w-10 rounded-xl bg-white ring-1 ring-black/10 hover:bg-slate-50"
+                aria-label="Open menu"
+              >
+                ☰
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile menu -->
+          <div id="mobileMenu" class="md:hidden mt-4 hidden">
+            <div class="rounded-2xl bg-white ring-1 ring-black/10 p-4">
+              <div class="grid gap-3 text-sm text-slate-700">
+                <a class="hover:text-slate-900" href="#home">Home</a>
+                <a class="hover:text-slate-900" href="#about">About</a>
+                <a class="hover:text-slate-900" href="#services">Service</a>
+                <a class="hover:text-slate-900" href="#property">Property</a>
+                <a class="hover:text-slate-900" href="#contact">Contact</a>
+                <a class="inline-flex items-center gap-2 rounded-xl bg-[#2F36A6] px-4 py-2 font-semibold text-white" href="tel:+8001891427078">
+                  📞 +800 1891 427 078
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- HERO -->
+        <section id="home" class="px-6 lg:px-10 pt-6">
+          <div class="rounded-[26px] bg-white ring-1 ring-black/10 p-4">
+            <div class="relative overflow-hidden rounded-[22px] h-[260px] sm:h-[300px] lg:h-[330px] bg-slate-200">
+              <!-- Replace with your own image -->
+              <img
+                class="absolute inset-0 h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80"
+                alt="Building"
+              />
+              <div class="absolute inset-0 bg-gradient-to-r from-[#1E236E]/35 via-transparent to-[#1E236E]/25"></div>
+
+              <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white drop-shadow">
+                  Find Your Properties
+                </h1>
+
+                <div class="mt-4 w-full max-w-xl">
+                  <div class="flex items-center gap-2 rounded-full bg-white/90 ring-1 ring-black/10 px-3 py-2">
+                    <span class="text-slate-500">🔍</span>
+                    <input
+                      id="heroSearch"
+                      class="w-full bg-transparent outline-none text-sm placeholder:text-slate-400"
+                      placeholder="Find Your Property"
+                    />
+                    <button
+                      id="heroSearchBtn"
+                      class="h-9 w-9 rounded-full bg-[#2F36A6] text-white grid place-items-center hover:brightness-95"
+                      aria-label="Search"
+                      title="Search"
+                    >
+                      →
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category chips -->
+            <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              <button class="cat-btn group rounded-2xl bg-[#F5F6FB] ring-1 ring-black/10 p-3 text-left hover:bg-white" data-cat="Duplex & Triplex">
+                <div class="flex items-center gap-3">
+                  <img class="h-12 w-16 rounded-xl object-cover" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=400&q=80" alt="Duplex" />
+                  <div>
+                    <div class="text-sm font-semibold">Duplex & Triplex</div>
+                    <div class="text-xs text-slate-500">Premium homes</div>
+                  </div>
+                </div>
+              </button>
+
+              <button class="cat-btn group rounded-2xl bg-[#F5F6FB] ring-1 ring-black/10 p-3 text-left hover:bg-white" data-cat="Apartment & Units">
+                <div class="flex items-center gap-3">
+                  <img class="h-12 w-16 rounded-xl object-cover" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=400&q=80" alt="Apartments" />
+                  <div>
+                    <div class="text-sm font-semibold">Apartment & Units</div>
+                    <div class="text-xs text-slate-500">City living</div>
+                  </div>
+                </div>
+              </button>
+
+              <button class="cat-btn group rounded-2xl bg-[#F5F6FB] ring-1 ring-black/10 p-3 text-left hover:bg-white" data-cat="Multistory Buildings">
+                <div class="flex items-center gap-3">
+                  <img class="h-12 w-16 rounded-xl object-cover" src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=400&q=80" alt="Buildings" />
+                  <div>
+                    <div class="text-sm font-semibold">Multistory Buildings</div>
+                    <div class="text-xs text-slate-500">Business towers</div>
+                  </div>
+                </div>
+              </button>
+
+              <button class="cat-btn group rounded-2xl bg-[#F5F6FB] ring-1 ring-black/10 p-3 text-left hover:bg-white" data-cat="Modern Architecture">
+                <div class="flex items-center gap-3">
+                  <img class="h-12 w-16 rounded-xl object-cover" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=400&q=80" alt="Modern" />
+                  <div>
+                    <div class="text-sm font-semibold">Modern Architecture</div>
+                    <div class="text-xs text-slate-500">New designs</div>
+                  </div>
+                </div>
+              </button>
+            </div>
+
+            <!-- little floating call button (right side like screenshot) -->
+            <div class="mt-4 flex justify-end">
+              <button class="h-10 w-10 rounded-full bg-white ring-1 ring-black/10 hover:bg-slate-50" title="Call">
+                📞
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT / STATS -->
+        <section id="about" class="px-6 lg:px-10 py-10">
+          <div class="grid gap-8 lg:grid-cols-2 lg:items-start">
+            <div>
+              <h2 class="text-3xl sm:text-4xl font-semibold leading-tight">
+                Your Trusted Real <br /> Estate Advisors
+              </h2>
+              <p class="mt-4 text-sm text-slate-600 max-w-xl">
+                Find Your Property: I’ve put together more than 50 templates of automated real estate text message scripts to
+                use in your first text messaging campaign.
+              </p>
+
+              <div class="mt-6 grid gap-4 sm:grid-cols-2 max-w-md">
+                <div class="rounded-2xl bg-white ring-1 ring-black/10 p-5">
+                  <div class="text-2xl font-semibold">30+</div>
+                  <div class="mt-1 text-xs text-slate-500">Satisfied Customer</div>
+                </div>
+                <div class="rounded-2xl bg-[#2F36A6] text-white ring-1 ring-black/10 p-5">
+                  <div class="text-2xl font-semibold">5k+</div>
+                  <div class="mt-1 text-xs text-white/80">Award winning</div>
+                </div>
+                <div class="rounded-2xl bg-white ring-1 ring-black/10 p-5">
+                  <div class="text-2xl font-semibold">07+</div>
+                  <div class="mt-1 text-xs text-slate-500">Years of Experience</div>
+                </div>
+                <div class="rounded-2xl bg-white ring-1 ring-black/10 p-5">
+                  <div class="text-2xl font-semibold">33+</div>
+                  <div class="mt-1 text-xs text-slate-500">Projects Delivered</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- stacked images -->
+            <div class="relative flex justify-center lg:justify-end">
+              <div class="relative w-full max-w-md">
+                <div class="rounded-2xl overflow-hidden ring-1 ring-black/10 bg-slate-200">
+                  <img
+                    class="h-64 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80"
+                    alt="Property"
+                  />
+                </div>
+
+                <div class="absolute -bottom-10 right-6 w-64 rounded-2xl overflow-hidden ring-1 ring-black/10 bg-slate-200">
+                  <img
+                    class="h-40 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80"
+                    alt="Interior"
+                  />
+                </div>
+
+                <button
+                  class="absolute left-1/2 -translate-x-1/2 bottom-8 h-14 w-14 rounded-full bg-[#2F36A6] text-white grid place-items-center ring-4 ring-white hover:brightness-95"
+                  title="Play"
+                >
+                  ↗
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="px-6 lg:px-10 pb-12">
+          <div class="text-center">
+            <h3 class="text-2xl sm:text-3xl font-semibold">Our Services</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Enhance your property listings and videos with accurate and engaging subtitles.
+            </p>
+          </div>
+
+          <div class="mt-8 rounded-3xl bg-white ring-1 ring-black/10 p-6">
+            <div class="grid gap-4 md:grid-cols-2">
+              <div class="rounded-2xl bg-[#2F36A6] text-white p-5 flex gap-4">
+                <div class="h-12 w-12 rounded-2xl bg-white/15 grid place-items-center">🏠</div>
+                <div>
+                  <div class="font-semibold">Affordable Property Taxes</div>
+                  <p class="mt-1 text-sm text-white/80">
+                    We help you find a new home by offering a smart real estate experience.
+                  </p>
+                </div>
+              </div>
+
+              <div class="rounded-2xl bg-[#F5F6FB] ring-1 ring-black/10 p-5 flex gap-4">
+                <div class="h-12 w-12 rounded-2xl bg-white grid place-items-center ring-1 ring-black/10">✅</div>
+                <div>
+                  <div class="font-semibold">Guaranteed Quality Homes</div>
+                  <p class="mt-1 text-sm text-slate-600">
+                    We help you find a new home by offering a smart real estate experience.
+                  </p>
+                </div>
+              </div>
+
+              <div class="rounded-2xl bg-[#F5F6FB] ring-1 ring-black/10 p-5 flex gap-4">
+                <div class="h-12 w-12 rounded-2xl bg-white grid place-items-center ring-1 ring-black/10">⚡</div>
+                <div>
+                  <div class="font-semibold">Fast and Easy Process</div>
+                  <p class="mt-1 text-sm text-slate-600">
+                    We help you find a new home by offering a smart real estate experience.
+                  </p>
+                </div>
+              </div>
+
+              <div class="rounded-2xl bg-[#F5F6FB] ring-1 ring-black/10 p-5 flex gap-4">
+                <div class="h-12 w-12 rounded-2xl bg-white grid place-items-center ring-1 ring-black/10">🛡️</div>
+                <div>
+                  <div class="font-semibold">Property Insurance</div>
+                  <p class="mt-1 text-sm text-slate-600">
+                    We help you find a new home by offering a smart real estate experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 flex justify-end">
+              <button
+                class="inline-flex items-center gap-2 rounded-xl bg-[#2F36A6] px-5 py-3 text-sm font-semibold text-white hover:brightness-95"
+              >
+                Explore <span>→</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROPERTY GRID -->
+        <section id="property" class="px-6 lg:px-10 pb-12">
+          <div class="grid gap-6 lg:grid-cols-2 lg:items-start">
+            <div>
+              <h3 class="text-3xl sm:text-4xl font-semibold leading-tight">
+                Discover Your Perfect <br /> Property Match
+              </h3>
+            </div>
+            <div class="lg:pt-2">
+              <p class="text-sm text-slate-600">
+                Find Your Property: I’ve put together more than 50 templates of automated real estate text message scripts to
+                use in your first text messaging campaign.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 grid gap-5 lg:grid-cols-2">
+            <!-- Card -->
+            <article class="rounded-2xl overflow-hidden bg-white ring-1 ring-black/10">
+              <div class="relative">
+                <img
+                  class="h-44 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1400&q=80"
+                  alt="Skyper Pool Apartment"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"></div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <div class="font-semibold">Skyper Pool Apartment</div>
+                    <div class="mt-1 text-xs text-slate-500">Road 12, Downtown, Dhaka</div>
+                  </div>
+                  <div class="text-sm font-semibold text-[#2F36A6]">BDT 1,45,0000</div>
+                </div>
+
+                <div class="mt-3 flex items-center gap-4 text-xs text-slate-600">
+                  <span>🛏 4</span>
+                  <span>🛁 2</span>
+                  <span>📐 3200 sqft</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rounded-2xl overflow-hidden bg-white ring-1 ring-black/10">
+              <div class="relative">
+                <img
+                  class="h-44 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80"
+                  alt="Cedar Residence"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"></div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <div class="font-semibold">Cedar Residence</div>
+                    <div class="mt-1 text-xs text-slate-500">Block B, Uttara, Dhaka</div>
+                  </div>
+                  <div class="text-sm font-semibold text-[#2F36A6]">BDT 1,25,0000</div>
+                </div>
+
+                <div class="mt-3 flex items-center gap-4 text-xs text-slate-600">
+                  <span>🛏 3</span>
+                  <span>🛁 2</span>
+                  <span>📐 2300 sqft</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rounded-2xl overflow-hidden bg-white ring-1 ring-black/10">
+              <div class="relative">
+                <img
+                  class="h-44 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1560185009-dddeb820c7b7?auto=format&fit=crop&w=1400&q=80"
+                  alt="Lakeside Apartment"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"></div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <div class="font-semibold">Lakeside Apartment</div>
+                    <div class="mt-1 text-xs text-slate-500">Road 21, Dhanmondi, Dhaka</div>
+                  </div>
+                  <div class="text-sm font-semibold text-[#2F36A6]">BDT 1,45,0000</div>
+                </div>
+
+                <div class="mt-3 flex items-center gap-4 text-xs text-slate-600">
+                  <span>🛏 4</span>
+                  <span>🛁 3</span>
+                  <span>📐 3600 sqft</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Image tile with round button -->
+            <div class="relative rounded-2xl overflow-hidden bg-white ring-1 ring-black/10 min-h-[220px]">
+              <img
+                class="absolute inset-0 h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1400&q=80"
+                alt="More properties"
+              />
+              <div class="absolute inset-0 bg-black/25"></div>
+
+              <button
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-14 w-14 rounded-full bg-[#2F36A6] text-white grid place-items-center ring-4 ring-white hover:brightness-95"
+                title="Open"
+              >
+                ↗
+              </button>
+            </div>
+          </div>
+
+          <!-- Toast -->
+          <div id="toast" class="px-6 lg:px-10 pb-10 hidden">
+            <div class="mt-6 rounded-2xl bg-white ring-1 ring-black/10 p-4 text-sm text-slate-700">
+              <span class="font-semibold">Action:</span>
+              <span id="toastText"></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="px-6 lg:px-10 pb-10">
+          <div class="rounded-2xl bg-white ring-1 ring-black/10 p-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div class="text-sm text-slate-600">
+              © <span id="year"></span> Real Estate Landing. All rights reserved.
+            </div>
+            <div class="flex items-center gap-3">
+              <a class="text-sm text-slate-600 hover:text-slate-900" href="#">Privacy</a>
+              <a class="text-sm text-slate-600 hover:text-slate-900" href="#">Terms</a>
+              <a class="text-sm text-slate-600 hover:text-slate-900" href="#">Support</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <script>
+      // Year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+      }
+
+      // Simple toast helper
+      const toastWrap = document.getElementById("toast");
+      const toastText = document.getElementById("toastText");
+      function showToast(msg) {
+        toastText.textContent = " " + msg;
+        toastWrap.classList.remove("hidden");
+        clearTimeout(window.__t);
+        window.__t = setTimeout(() => toastWrap.classList.add("hidden"), 2600);
+      }
+
+      // Hero search
+      const heroSearch = document.getElementById("heroSearch");
+      const heroSearchBtn = document.getElementById("heroSearchBtn");
+      heroSearchBtn.addEventListener("click", () => {
+        const q = heroSearch.value.trim() || "No query entered";
+        showToast(`Searching for: ${q}`);
+      });
+
+      // Category buttons (chips)
+      document.querySelectorAll(".cat-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const cat = btn.dataset.cat || "Category";
+          showToast(`Selected category: ${cat}`);
+        });
+      });
+    </script>
+  </body>
+</html>
