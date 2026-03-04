@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rent H&U — Real Estate Landing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <!-- class="bg-[#EEF3F8] text-slate-900" -->
+  <body >
+    <!-- Background -->
+    <!-- <div class="fixed inset-0 -z-10 bg-gradient-to-b from-[#E9F0F7] via-[#EEF3F8] to-white"></div> -->
+
+    <!-- class="px-4 py-10" -->
+    <main >
+      <!-- Outer card frame -->
+      <div class="mx-auto max-w-6xl rounded-[0px] bg-white shadow-xl overflow-hidden">
+        <!-- HERO -->
+        <section class="relative">
+          <!-- Hero image -->
+          <div class="relative h-[520px] sm:h-[560px]">
+            <img
+              class="absolute inset-0 h-full w-full object-cover"
+              src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80"
+              alt="Modern Home"
+            />
+            <!-- overlays -->
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0B3A5C]/90 via-[#0B3A5C]/45 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/10"></div>
+
+            <!-- Top nav -->
+            <header class="relative z-10 px-6 lg:px-10 pt-6">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3 text-white">
+                  <div class="h-10 w-10 rounded-xl bg-white/15 ring-1 ring-white/20 grid place-items-center">
+                    🏠
+                  </div>
+                  <div class="leading-tight">
+                    <div class="font-semibold">Rent H&amp;U</div>
+                    <div class="text-xs text-white/70 -mt-0.5">Real Estate</div>
+                  </div>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-8 text-sm text-white/80">
+                  <a class="hover:text-white" href="#home">Home</a>
+                  <a class="hover:text-white" href="#contacts">Contacts</a>
+                  <a class="hover:text-white" href="#support">Support</a>
+                  <a class="hover:text-white" href="#location">Location</a>
+                  <a class="hover:text-white" href="#about">About us</a>
+                </nav>
+
+                <a
+                  href="#"
+                  class="inline-flex items-center justify-center rounded-full bg-white/20 px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-white/20 hover:bg-white/25"
+                >
+                  Try now
+                </a>
+              </div>
+            </header>
+
+            <!-- Hero content -->
+            <div class="relative z-10 px-6 lg:px-10 pt-16 sm:pt-20">
+              <div class="max-w-xl">
+                <h1 class="text-white text-4xl sm:text-5xl font-semibold leading-tight">
+                  Finding Your New <br />
+                  Home Is Simple
+                </h1>
+                <p class="mt-4 text-sm sm:text-base text-white/75 max-w-md">
+                  RentHomes.com is your go to destination for finding the perfect rental home to suit your needs.
+                  With thousands of property listings across the United States, and Europe.
+                </p>
+
+                <div class="mt-7">
+                  <button
+                    id="quickSearchBtn"
+                    class="inline-flex items-center gap-3 rounded-full bg-white/15 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/20 hover:bg-white/20"
+                  >
+                    <span class="h-9 w-9 rounded-full bg-white/15 grid place-items-center">🔍</span>
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating search bar -->
+            <div class="absolute left-0 right-0 bottom-[-34px] px-6 lg:px-10 z-20">
+              <div class="mx-auto max-w-4xl rounded-[22px] bg-white shadow-lg ring-1 ring-black/5 p-4">
+                <div class="grid gap-3 md:grid-cols-4 md:items-center">
+                  <!-- City -->
+                  <div class="flex items-center gap-3 rounded-2xl bg-[#F4F7FB] px-4 py-3 ring-1 ring-black/5">
+                    <span class="text-slate-500">📍</span>
+                    <div class="flex-1">
+                      <div class="text-xs text-slate-500">City Street</div>
+                      <input
+                        id="cityInput"
+                        class="w-full bg-transparent outline-none text-sm font-semibold placeholder:font-normal"
+                        placeholder="123Street"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Type -->
+                  <div class="flex items-center gap-3 rounded-2xl bg-[#F4F7FB] px-4 py-3 ring-1 ring-black/5">
+                    <span class="text-slate-500">🏡</span>
+                    <div class="flex-1">
+                      <div class="text-xs text-slate-500">Typology of rent</div>
+                      <select id="typeSelect" class="w-full bg-transparent outline-none text-sm font-semibold">
+                        <option>Villa</option>
+                        <option>Apartment</option>
+                        <option>House</option>
+                        <option>Studio</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Price -->
+                  <div class="flex items-center gap-3 rounded-2xl bg-[#F4F7FB] px-4 py-3 ring-1 ring-black/5">
+                    <span class="text-slate-500">💶</span>
+                    <div class="flex-1">
+                      <div class="text-xs text-slate-500">Price</div>
+                      <input
+                        id="priceInput"
+                        class="w-full bg-transparent outline-none text-sm font-semibold"
+                        value="€ 950.000,00"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Button -->
+                  <button
+                    id="mainSearchBtn"
+                    class="h-[54px] rounded-2xl bg-[#0B3A5C] text-white font-semibold text-sm hover:bg-[#0a314c] flex items-center justify-center gap-2"
+                  >
+                    🔎 Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Spacer for floating bar -->
+        <div class="h-14"></div>
+
+        <!-- MOST VIEWED -->
+        <section class="px-6 lg:px-10 py-12">
+          <div class="text-center">
+            <h2 class="text-3xl sm:text-4xl font-semibold">Most Viewed</h2>
+            <p class="mt-3 text-sm text-slate-600 max-w-2xl mx-auto">
+              Discover a range of vacation homes worldwide. Book securely and get expert customer support for a stress-free stay.
+            </p>
+          </div>
+
+          <!-- Cards -->
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <!-- Card 1 -->
+            <article class="rounded-[22px] bg-white shadow-sm ring-1 ring-black/5 overflow-hidden">
+              <div class="p-4">
+                <div class="rounded-[18px] overflow-hidden">
+                  <img
+                    class="h-44 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80"
+                    alt="Ocean Breeze Villa"
+                  />
+                </div>
+
+                <div class="mt-4">
+                  <div class="text-xs text-slate-500 flex items-center justify-between">
+                    <span>122 Merrion Rd, New York</span>
+                    <span class="inline-flex items-center gap-2">
+                      <span>🛏 4</span>
+                      <span>🛁 2</span>
+                    </span>
+                  </div>
+
+                  <h3 class="mt-2 font-semibold text-lg">Ocean Breeze Villa</h3>
+                  <div class="mt-2 text-sm font-semibold text-slate-900">€ 910.000,00</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="rounded-[22px] bg-white shadow-sm ring-1 ring-black/5 overflow-hidden">
+              <div class="p-4">
+                <div class="rounded-[18px] overflow-hidden">
+                  <img
+                    class="h-44 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80"
+                    alt="Jakson House"
+                  />
+                </div>
+
+                <div class="mt-4">
+                  <div class="text-xs text-slate-500 flex items-center justify-between">
+                    <span>45 Old Avenue, Chicago</span>
+                    <span class="inline-flex items-center gap-2">
+                      <span>🛏 3</span>
+                      <span>🛁 2</span>
+                    </span>
+                  </div>
+
+                  <h3 class="mt-2 font-semibold text-lg">Jakson House</h3>
+                  <div class="mt-2 text-sm font-semibold text-slate-900">€ 750.000,00</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="rounded-[22px] bg-white shadow-sm ring-1 ring-black/5 overflow-hidden">
+              <div class="p-4">
+                <div class="rounded-[18px] overflow-hidden">
+                  <img
+                    class="h-44 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1400&q=80"
+                    alt="Lakeside Cottage"
+                  />
+                </div>
+
+                <div class="mt-4">
+                  <div class="text-xs text-slate-500 flex items-center justify-between">
+                    <span>700 Bay Area, Los Angeles</span>
+                    <span class="inline-flex items-center gap-2">
+                      <span>🛏 3</span>
+                      <span>🛁 1</span>
+                    </span>
+                  </div>
+
+                  <h3 class="mt-2 font-semibold text-lg">Lakeside Cottage</h3>
+                  <div class="mt-2 text-sm font-semibold text-slate-900">€ 540.000,00</div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Dots -->
+          <div class="mt-8 flex items-center justify-center gap-2">
+            <span class="h-2 w-2 rounded-full bg-slate-900/70"></span>
+            <span class="h-2 w-2 rounded-full bg-slate-900/20"></span>
+            <span class="h-2 w-2 rounded-full bg-slate-900/20"></span>
+          </div>
+        </section>
+
+        <!-- Next section preview (like screenshot bottom) -->
+        <section class="px-6 lg:px-10 pb-12">
+          <div class="rounded-[26px] bg-white ring-1 ring-black/5 overflow-hidden">
+            <div class="grid gap-6 lg:grid-cols-2 lg:items-center">
+              <div class="relative h-60 lg:h-72">
+                <img
+                  class="absolute inset-0 h-full w-full object-cover"
+                  src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1600&q=80"
+                  alt="Building"
+                />
+                <div class="absolute inset-0 bg-gradient-to-r from-black/25 to-transparent"></div>
+                <div class="absolute left-5 top-5 h-12 w-12 rounded-2xl bg-white/20 ring-1 ring-white/25 grid place-items-center text-white">
+                  🏠
+                </div>
+              </div>
+
+              <div class="p-6 lg:p-8">
+                <h3 class="text-2xl sm:text-3xl font-semibold leading-tight">
+                  The Easiest Method <br />
+                  To Find a House
+                </h3>
+                <p class="mt-3 text-sm text-slate-600">
+                  Filter by location, type, and budget — then connect with verified owners and agents.
+                </p>
+
+                <div class="mt-5 flex flex-wrap gap-3">
+                  <button class="rounded-full bg-[#0B3A5C] px-6 py-3 text-sm font-semibold text-white hover:bg-[#0a314c]">
+                    Explore Listings
+                  </button>
+                  <button class="rounded-full bg-[#F4F7FB] px-6 py-3 text-sm font-semibold text-slate-700 ring-1 ring-black/5 hover:bg-slate-50">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Toast -->
+          <div id="toast" class="hidden mt-6">
+            <div class="rounded-2xl bg-white ring-1 ring-black/10 p-4 text-sm text-slate-700">
+              <span class="font-semibold">Search:</span>
+              <span id="toastText"></span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      const toast = document.getElementById("toast");
+      const toastText = document.getElementById("toastText");
+
+      function showToast(msg) {
+        toastText.textContent = " " + msg;
+        toast.classList.remove("hidden");
+        clearTimeout(window.__t);
+        window.__t = setTimeout(() => toast.classList.add("hidden"), 2600);
+      }
+
+      document.getElementById("quickSearchBtn").addEventListener("click", () => {
+        showToast("Open quick search (demo). Use the form below to search.");
+      });
+
+      document.getElementById("mainSearchBtn").addEventListener("click", () => {
+        const city = document.getElementById("cityInput").value.trim() || "123Street";
+        const type = document.getElementById("typeSelect").value;
+        const price = document.getElementById("priceInput").value.trim() || "€ 950.000,00";
+        showToast(`${city} • ${type} • ${price}`);
+      });
+    </script>
+  </body>
+</html>
