@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamHome — Real Estate Landing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body ">
+    <!-- Background split like the mock -->
+    <!-- <div class="fixed inset-0 -z-10">
+      <div class="absolute inset-y-0 left-0 w-1/2 bg-[#4BC3BF]"></div>
+      <div class="absolute inset-y-0 right-0 w-1/2 bg-[#F36F63]"></div>
+      <div class="absolute inset-0 bg-black/10"></div>
+    </div> -->
+
+    <!-- Page frame -->
+     <!-- class="px-4 py-10" -->
+    <main>
+        <!-- class="mx-auto max-w-6xl rounded-[34px] bg-white/20 ring-1 ring-white/30 shadow-2xl backdrop-blur-md overflow-hidden" -->
+      <div >
+        <!-- class="p-4 sm:p-5" -->
+        <div>
+          <div class="rounded-[0px] bg-[#EAF6F6] overflow-hidden ring-1 ring-black/5">
+            <!-- NAV -->
+            <header class="px-6 lg:px-10 pt-6">
+              <div class="flex items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                  <div class="h-10 w-10 rounded-2xl bg-white grid place-items-center ring-1 ring-black/10">
+                    <div class="h-5 w-5 rounded-full bg-[#F36F63] ring-4 ring-[#4BC3BF]/20"></div>
+                  </div>
+                  <div class="leading-tight">
+                    <div class="font-semibold">DreamYama</div>
+                    <div class="text-xs text-slate-500 -mt-0.5">Real Estate</div>
+                  </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center gap-7 text-sm text-slate-600">
+                  <a class="hover:text-slate-900" href="#home">Home</a>
+                  <a class="hover:text-slate-900" href="#news">News</a>
+                  <a class="hover:text-slate-900" href="#agent">Agent</a>
+                  <a class="hover:text-slate-900" href="#type">Type</a>
+                  <a class="hover:text-slate-900" href="#contact">Contact</a>
+                  <a class="hover:text-slate-900" href="#blog">Blog</a>
+                  <a class="hover:text-slate-900" href="#test">Test</a>
+                </nav>
+
+                <div class="flex items-center gap-3">
+                  <button
+                    class="hidden sm:inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/10 hover:bg-slate-50"
+                    id="followBtn"
+                  >
+                    Follow Us
+                    <span class="inline-grid h-6 w-6 place-items-center rounded-full bg-[#2B8F8B] text-white">→</span>
+                  </button>
+
+                  <button
+                    class="lg:hidden h-10 w-10 rounded-2xl bg-white ring-1 ring-black/10 hover:bg-slate-50"
+                    id="menuBtn"
+                    aria-label="Open menu"
+                  >
+                    ☰
+                  </button>
+                </div>
+              </div>
+
+              <!-- mobile nav -->
+              <div id="mobileNav" class="lg:hidden hidden mt-4">
+                <div class="rounded-2xl bg-white ring-1 ring-black/10 p-4">
+                  <div class="grid gap-3 text-sm text-slate-700">
+                    <a href="#home" class="hover:text-slate-900">Home</a>
+                    <a href="#news" class="hover:text-slate-900">News</a>
+                    <a href="#agent" class="hover:text-slate-900">Agent</a>
+                    <a href="#type" class="hover:text-slate-900">Type</a>
+                    <a href="#contact" class="hover:text-slate-900">Contact</a>
+                    <a href="#blog" class="hover:text-slate-900">Blog</a>
+                    <a href="#test" class="hover:text-slate-900">Test</a>
+                    <button class="rounded-full bg-[#2B8F8B] text-white px-4 py-2 font-semibold">Follow Us</button>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <!-- HERO -->
+            <section id="home" class="px-6 lg:px-10 pt-6">
+              <div class="relative rounded-[28px] overflow-hidden ring-1 ring-black/5 bg-gradient-to-br from-[#0F6D73] via-[#1A8D8C] to-[#0A4B56]">
+                <!-- building image -->
+                <img
+                  class="absolute right-0 top-0 h-full w-[62%] object-cover opacity-90"
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80"
+                  alt="Building"
+                />
+                <!-- overlay -->
+                <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
+
+                <div class="relative p-8 sm:p-10 lg:p-12 grid gap-8 lg:grid-cols-2 lg:items-center">
+                  <!-- left content -->
+                  <div class="text-white">
+                    <h1 class="text-4xl sm:text-5xl font-semibold leading-tight">
+                      Find Your <br />
+                      Dream Home
+                    </h1>
+                    <p class="mt-4 max-w-md text-sm text-white/80">
+                      Search smart listings, compare neighborhoods, and connect with verified agents — all in one place.
+                    </p>
+
+                    <div class="mt-6 flex flex-wrap items-center gap-3">
+                      <button
+                        id="searchNowBtn"
+                        class="rounded-full bg-[#F36F63] px-6 py-3 text-sm font-semibold text-white hover:brightness-95"
+                      >
+                        Search Now
+                      </button>
+                      <button
+                        class="inline-flex items-center gap-2 rounded-full bg-white/15 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/20 hover:bg-white/20"
+                        id="howItWorksBtn"
+                      >
+                        ▶ To know more
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- right spacer (image area already) -->
+                  <div class="hidden lg:block"></div>
+                </div>
+
+                <!-- Search bar card (floating) -->
+                <div class="relative px-6 lg:px-10 pb-8">
+                  <div class="-mt-10 rounded-[22px] bg-white ring-1 ring-black/5 shadow-md p-4 sm:p-5">
+                    <div class="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+                      <!-- filters -->
+                      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 flex-1">
+                        <div class="rounded-2xl bg-[#F3FBFB] ring-1 ring-black/5 px-4 py-3 flex items-center gap-3">
+                          <span class="text-slate-500">📍</span>
+                          <div class="flex-1">
+                            <div class="text-xs text-slate-500">Reference</div>
+                            <input class="w-full bg-transparent outline-none text-sm" placeholder="Anywhere" id="refInput" />
+                          </div>
+                        </div>
+
+                        <div class="rounded-2xl bg-[#F3FBFB] ring-1 ring-black/5 px-4 py-3 flex items-center gap-3">
+                          <span class="text-slate-500">🏘️</span>
+                          <div class="flex-1">
+                            <div class="text-xs text-slate-500">Explore</div>
+                            <select class="w-full bg-transparent outline-none text-sm" id="exploreSel">
+                              <option>Apartment</option>
+                              <option>House</option>
+                              <option>Villa</option>
+                              <option>Condo</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="rounded-2xl bg-[#F3FBFB] ring-1 ring-black/5 px-4 py-3 flex items-center gap-3">
+                          <span class="text-slate-500">🧾</span>
+                          <div class="flex-1">
+                            <div class="text-xs text-slate-500">Estate</div>
+                            <select class="w-full bg-transparent outline-none text-sm" id="estateSel">
+                              <option>For Sale</option>
+                              <option>For Rent</option>
+                              <option>New Launch</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="rounded-2xl bg-[#F3FBFB] ring-1 ring-black/5 px-4 py-3 flex items-center gap-3">
+                          <span class="text-slate-500">📅</span>
+                          <div class="flex-1">
+                            <div class="text-xs text-slate-500">Next</div>
+                            <input class="w-full bg-transparent outline-none text-sm" placeholder="2-3 days" id="nextInput" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- rating + action -->
+                      <div class="flex items-center justify-between gap-3 lg:justify-end lg:min-w-[300px]">
+                        <div class="rounded-2xl bg-white ring-1 ring-black/5 px-4 py-3">
+                          <div class="text-xs text-slate-500">Talents</div>
+                          <div class="mt-1 flex items-center gap-2">
+                            <div class="h-7 w-7 rounded-full bg-[#F36F63]/15 grid place-items-center">👤</div>
+                            <div class="text-sm font-semibold">Proagents</div>
+                          </div>
+                        </div>
+
+                        <div class="relative rounded-2xl bg-white ring-1 ring-black/5 px-4 py-3">
+                          <div class="absolute -right-2 -top-2 h-6 w-6 rounded-full bg-[#F36F63] text-white text-xs grid place-items-center ring-2 ring-white">
+                            9
+                          </div>
+                          <div class="text-xs text-slate-500">Rating</div>
+                          <div class="mt-1 text-xl font-semibold text-[#0F6D73]">6.70</div>
+                        </div>
+
+                        <button
+                          id="confirmBtn"
+                          class="rounded-2xl bg-[#0F6D73] px-5 py-3 text-sm font-semibold text-white hover:brightness-95"
+                        >
+                          Confirm
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- FEATURED LISTINGS -->
+            <section id="type" class="px-6 lg:px-10 pt-10 pb-12">
+              <div class="flex items-center justify-between gap-4">
+                <h2 class="text-xl sm:text-2xl font-semibold">Featured listings + Type</h2>
+                <div class="flex items-center gap-2">
+                  <button class="h-10 w-10 rounded-full bg-white ring-1 ring-black/10 hover:bg-slate-50" id="prevBtn">←</button>
+                  <button class="h-10 w-10 rounded-full bg-white ring-1 ring-black/10 hover:bg-slate-50" id="nextBtn">→</button>
+                </div>
+              </div>
+
+              <div class="mt-6 grid gap-5 md:grid-cols-3">
+                <!-- card 1 -->
+                <article class="listing rounded-[22px] bg-white ring-1 ring-black/5 overflow-hidden">
+                  <img class="h-44 w-full object-cover" src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1200&q=80" alt="Listing">
+                  <div class="p-5">
+                    <h3 class="font-semibold">Mohack Fetgues</h3>
+                    <p class="mt-1 text-sm text-slate-600">Modern house near the river with sunset view.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <img class="h-9 w-9 rounded-full" src="https://i.pravatar.cc/80?img=13" alt="agent" />
+                        <div class="text-xs">
+                          <div class="font-semibold">By Jona</div>
+                          <div class="text-slate-500">Agent</div>
+                        </div>
+                      </div>
+                      <button class="rounded-full bg-[#E9F7F7] px-4 py-2 text-sm font-semibold text-[#0F6D73] ring-1 ring-black/5">
+                        $2.4k
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- card 2 -->
+                <article class="listing rounded-[22px] bg-white ring-1 ring-black/5 overflow-hidden">
+                  <img class="h-44 w-full object-cover" src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80" alt="Listing">
+                  <div class="p-5">
+                    <h3 class="font-semibold">Deeochood Tricalls</h3>
+                    <p class="mt-1 text-sm text-slate-600">Premium townhouse in the heart of downtown.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <img class="h-9 w-9 rounded-full" src="https://i.pravatar.cc/80?img=23" alt="agent" />
+                        <div class="text-xs">
+                          <div class="font-semibold">By Aida</div>
+                          <div class="text-slate-500">Agent</div>
+                        </div>
+                      </div>
+                      <button class="rounded-full bg-[#E9F7F7] px-4 py-2 text-sm font-semibold text-[#0F6D73] ring-1 ring-black/5">
+                        $3.1k
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- card 3 -->
+                <article class="listing rounded-[22px] bg-white ring-1 ring-black/5 overflow-hidden">
+                  <img class="h-44 w-full object-cover" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80" alt="Listing">
+                  <div class="p-5">
+                    <h3 class="font-semibold">Key Boolgany Tlinmart</h3>
+                    <p class="mt-1 text-sm text-slate-600">Family home with garden and bright interiors.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <img class="h-9 w-9 rounded-full" src="https://i.pravatar.cc/80?img=33" alt="agent" />
+                        <div class="text-xs">
+                          <div class="font-semibold">By Kian</div>
+                          <div class="text-slate-500">Agent</div>
+                        </div>
+                      </div>
+                      <button class="rounded-full bg-[#E9F7F7] px-4 py-2 text-sm font-semibold text-[#0F6D73] ring-1 ring-black/5">
+                        $2.8k
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- dots -->
+              <div class="mt-6 flex items-center justify-center gap-2" id="dots">
+                <span class="h-2 w-2 rounded-full bg-slate-900/80"></span>
+                <span class="h-2 w-2 rounded-full bg-slate-900/20"></span>
+                <span class="h-2 w-2 rounded-full bg-slate-900/20"></span>
+                <span class="h-2 w-2 rounded-full bg-slate-900/20"></span>
+                <span class="h-2 w-2 rounded-full bg-slate-900/20"></span>
+              </div>
+            </section>
+
+            <!-- LOWER FEATURE SECTION -->
+            <section id="news" class="px-6 lg:px-10 pb-14">
+              <div class="rounded-[28px] bg-white ring-1 ring-black/5 p-6 sm:p-8">
+                <div class="grid gap-8 lg:grid-cols-2 lg:items-start">
+                  <!-- Left big text + card -->
+                  <div>
+                    <h2 class="text-3xl sm:text-4xl font-semibold leading-tight">
+                      <span class="text-[#F36F63]">Ourls</span> your <br />
+                      evermeting rest <br />
+                      atngoun mone
+                    </h2>
+                    <p class="mt-4 text-sm text-slate-600 max-w-md">
+                      We help you manage transactions fast & securely, with transparent agent support and verified listings.
+                    </p>
+
+                    <div class="mt-6 rounded-[24px] bg-gradient-to-br from-[#0F6D73] via-[#0F6D73] to-[#0A4B56] text-white p-6 overflow-hidden relative">
+                      <div class="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10"></div>
+                      <h3 class="text-2xl font-semibold leading-tight">
+                        Fest <br /> Racket
+                      </h3>
+                      <p class="mt-3 text-sm text-white/80 max-w-xs">
+                        Get the best match for your budget, location, and lifestyle.
+                      </p>
+                      <button class="mt-5 rounded-full bg-white/15 px-5 py-2.5 text-sm font-semibold ring-1 ring-white/20 hover:bg-white/20">
+                        Browse Listings →
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Right: bullet features + image collage -->
+                  <div class="grid gap-6">
+                    <div class="space-y-4">
+                      <div class="flex gap-3">
+                        <div class="h-10 w-10 rounded-full bg-[#F36F63]/15 grid place-items-center text-[#F36F63] ring-1 ring-black/5">
+                          ⓘ
+                        </div>
+                        <div>
+                          <div class="font-semibold">Pricing</div>
+                          <p class="text-sm text-slate-600">
+                            Transparent pricing with no hidden fees — compare quickly.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="flex gap-3">
+                        <div class="h-10 w-10 rounded-full bg-[#4BC3BF]/20 grid place-items-center text-[#0F6D73] ring-1 ring-black/5">
+                          ✔
+                        </div>
+                        <div>
+                          <div class="font-semibold">Prechanded</div>
+                          <p class="text-sm text-slate-600">
+                            Verified properties & agents to reduce risk for buyers.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- collage -->
+                    <div class="grid grid-cols-2 gap-4">
+                      <div class="rounded-[22px] overflow-hidden ring-1 ring-black/5 bg-slate-200">
+                        <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80" alt="img1" />
+                      </div>
+                      <div class="rounded-[22px] overflow-hidden ring-1 ring-black/5 bg-slate-200">
+                        <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80" alt="img2" />
+                      </div>
+                      <div class="rounded-[22px] overflow-hidden ring-1 ring-black/5 bg-slate-200 col-span-2 relative">
+                        <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1400&q=80" alt="img3" />
+                        <button class="absolute right-4 top-4 h-12 w-12 rounded-full bg-[#2B8F8B] text-white grid place-items-center ring-4 ring-white hover:brightness-95" title="Open">
+                          ↗
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Toast -->
+              <div id="toast" class="hidden mt-6">
+                <div class="rounded-2xl bg-white ring-1 ring-black/10 p-4 text-sm text-slate-700">
+                  <span class="font-semibold">Info:</span>
+                  <span id="toastText"></span>
+                </div>
+              </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer id="contact" class="px-6 lg:px-10 pb-10">
+              <div class="rounded-[22px] bg-white ring-1 ring-black/5 p-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div class="text-sm text-slate-600">© <span id="year"></span> DreamYama. All rights reserved.</div>
+                <div class="flex items-center gap-4 text-sm">
+                  <a class="text-slate-600 hover:text-slate-900" href="#">Privacy</a>
+                  <a class="text-slate-600 hover:text-slate-900" href="#">Terms</a>
+                  <a class="text-slate-600 hover:text-slate-900" href="#">Support</a>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // helpers
+      const yearEl = document.getElementById("year");
+      yearEl.textContent = new Date().getFullYear();
+
+      const toast = document.getElementById("toast");
+      const toastText = document.getElementById("toastText");
+      function showToast(msg) {
+        toastText.textContent = " " + msg;
+        toast.classList.remove("hidden");
+        clearTimeout(window.__t);
+        window.__t = setTimeout(() => toast.classList.add("hidden"), 2600);
+      }
+
+      // mobile nav
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileNav = document.getElementById("mobileNav");
+      menuBtn?.addEventListener("click", () => mobileNav.classList.toggle("hidden"));
+
+      // hero actions
+      document.getElementById("searchNowBtn").addEventListener("click", () => {
+        const ref = document.getElementById("refInput").value.trim() || "Anywhere";
+        showToast(`Searching listings near: ${ref}`);
+      });
+      document.getElementById("howItWorksBtn").addEventListener("click", () => {
+        showToast("How it works: Search → Compare → Contact agent.");
+      });
+      document.getElementById("confirmBtn").addEventListener("click", () => {
+        const ref = document.getElementById("refInput").value.trim() || "Anywhere";
+        const explore = document.getElementById("exploreSel").value;
+        const estate = document.getElementById("estateSel").value;
+        const next = document.getElementById("nextInput").value.trim() || "Soon";
+        showToast(`Confirmed: ${ref} • ${explore} • ${estate} • Next: ${next}`);
+      });
+
+      // simple carousel behavior (swap listing titles/images)
+      const listings = [
+        {
+          title: "Mohack Fetgues",
+          desc: "Modern house near the river with sunset view.",
+          img: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1200&q=80",
+          by: "Jona",
+          price: "$2.4k",
+          agentImg: "https://i.pravatar.cc/80?img=13",
+        },
+        {
+          title: "Deeochood Tricalls",
+          desc: "Premium townhouse in the heart of downtown.",
+          img: "https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80",
+          by: "Aida",
+          price: "$3.1k",
+          agentImg: "https://i.pravatar.cc/80?img=23",
+        },
+        {
+          title: "Key Boolgany Tlinmart",
+          desc: "Family home with garden and bright interiors.",
+          img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+          by: "Kian",
+          price: "$2.8k",
+          agentImg: "https://i.pravatar.cc/80?img=33",
+        },
+        {
+          title: "Sunset Bay Villa",
+          desc: "Ocean-facing villa with private pool and deck.",
+          img: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+          by: "Mira",
+          price: "$4.2k",
+          agentImg: "https://i.pravatar.cc/80?img=45",
+        },
+        {
+          title: "Urban Loft Suites",
+          desc: "Loft-style apartment with skyline view.",
+          img: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+          by: "Noah",
+          price: "$2.1k",
+          agentImg: "https://i.pravatar.cc/80?img=52",
+        },
+      ];
+
+      const cards = Array.from(document.querySelectorAll(".listing"));
+      const dots = Array.from(document.querySelectorAll("#dots span"));
+      let page = 0;
+
+      function renderPage() {
+        // show 3 at a time
+        const start = page * 3;
+        const slice = [listings[start % listings.length], listings[(start + 1) % listings.length], listings[(start + 2) % listings.length]];
+        slice.forEach((item, i) => {
+          const card = cards[i];
+          const img = card.querySelector("img");
+          const h3 = card.querySelector("h3");
+          const p = card.querySelector("p");
+          const agentName = card.querySelector(".text-xs .font-semibold");
+          const priceBtn = card.querySelector("button.rounded-full");
+          const avatar = card.querySelector("img.h-9");
+          img.src = item.img;
+          h3.textContent = item.title;
+          p.textContent = item.desc;
+          agentName.textContent = `By ${item.by}`;
+          priceBtn.textContent = item.price;
+          avatar.src = item.agentImg;
+        });
+
+        // dots
+        dots.forEach((d, i) => {
+          d.classList.toggle("bg-slate-900/80", i === (page % dots.length));
+          d.classList.toggle("bg-slate-900/20", i !== (page % dots.length));
+        });
+      }
+
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        page = (page - 1 + 5) % 5;
+        renderPage();
+        showToast("Showing previous featured set.");
+      });
+
+      document.getElementById("nextBtn").addEventListener("click", () => {
+        page = (page + 1) % 5;
+        renderPage();
+        showToast("Showing next featured set.");
+      });
+
+      document.getElementById("followBtn")?.addEventListener("click", () => {
+        showToast("Thanks for following! (Demo action)");
+      });
+
+      // init
+      renderPage();
+    </script>
+  </body>
+</html>
