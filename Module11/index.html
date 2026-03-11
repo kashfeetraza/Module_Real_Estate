@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Real Estate</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: Inter, sans-serif; }
+    .font-head { font-family: Poppins, sans-serif; }
+  </style>
+</head>
+
+<body class="bg-[#f5f7fb] text-slate-900">
+
+<!-- ================= HERO ================= -->
+<section class="relative h-[640px] overflow-hidden">
+
+  <!-- Background Image -->
+  <img
+    src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80"
+    class="absolute inset-0 h-full w-full object-cover"
+    alt="Luxury House"
+  />
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-900/60 to-transparent"></div>
+
+  <!-- NAV -->
+  <header class="relative z-20 mx-auto flex max-w-6xl items-center justify-between px-6 pt-8 text-white">
+    <div class="flex items-center gap-2 font-head text-xl font-bold">
+      <span class="grid h-8 w-8 place-items-center rounded-full bg-white/20">🏠</span>
+      Delyrides
+    </div>
+
+    <nav class="hidden gap-8 text-sm font-medium md:flex">
+      <a href="#">Home</a>
+      <a href="#">Market</a>
+      <a href="#">Shop</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <a href="#" class="rounded-full bg-white px-5 py-2 text-sm font-semibold text-blue-900">
+      Enquiry
+    </a>
+  </header>
+
+  <!-- HERO CONTENT -->
+  <div class="relative z-10 mx-auto max-w-6xl px-6 pt-24 text-white">
+    <p class="text-sm text-white/80">Vision in No Details</p>
+
+    <h1 class="font-head mt-4 text-5xl font-extrabold leading-tight md:text-6xl">
+      Find the Perfect Home <br>
+      for Your Family
+    </h1>
+
+    <p class="mt-6 max-w-md text-sm text-white/80">
+      Explore modern properties and discover comfortable living
+      spaces designed for your lifestyle.
+    </p>
+
+    <a href="#"
+       class="mt-8 inline-block rounded-lg bg-blue-600 px-6 py-3 font-semibold hover:bg-blue-700">
+      Read Now
+    </a>
+  </div>
+
+  <!-- Floating Search Card -->
+  <div class="absolute bottom-[-60px] left-1/2 z-30 w-[92%] max-w-5xl -translate-x-1/2 rounded-2xl bg-white p-6 shadow-2xl">
+
+    <div class="grid gap-4 md:grid-cols-4">
+
+      <select class="rounded-xl border border-slate-200 p-3 text-sm">
+        <option>Property</option>
+        <option>Apartment</option>
+        <option>Villa</option>
+      </select>
+
+      <input class="rounded-xl border border-slate-200 p-3 text-sm"
+             placeholder="Location" />
+
+      <input class="rounded-xl border border-slate-200 p-3 text-sm"
+             placeholder="Price Range" />
+
+      <button class="rounded-xl bg-blue-600 p-3 text-sm font-semibold text-white hover:bg-blue-700">
+        Search
+      </button>
+    </div>
+
+    <!-- Bottom Icons -->
+    <div class="mt-6 flex flex-wrap justify-between gap-6 text-sm text-slate-600">
+      <div>🏙 City Bedrooms</div>
+      <div>🛏 Why Bedroom</div>
+      <div>⭐ Featured Listings</div>
+      <div>💰 Price Traditional</div>
+    </div>
+  </div>
+</section>
+
+<!-- SPACING -->
+<div class="h-28"></div>
+
+<!-- ================= FEATURED SECTION ================= -->
+<section class="mx-auto max-w-6xl px-6 py-16">
+
+  <div class="grid gap-10 md:grid-cols-3">
+
+    <div>
+      <h2 class="font-head text-3xl font-bold">
+        Featured Us <span class="text-blue-600">Virtual Tours</span>
+      </h2>
+      <p class="mt-4 text-sm text-slate-600">
+        Discover premium real estate experiences with interactive
+        tours and expert guidance.
+      </p>
+    </div>
+
+    <div>
+      <div class="mb-3 font-head text-lg font-semibold">Why Choose Us</div>
+      <p class="text-sm text-slate-600">
+        We offer trusted guidance and handpicked properties
+        tailored for your needs.
+      </p>
+    </div>
+
+    <div>
+      <div class="mb-3 font-head text-lg font-semibold">Services</div>
+      <p class="text-sm text-slate-600">
+        From property discovery to closing deals, we handle
+        everything professionally.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= START SEARCH SECTION ================= -->
+<section class="mx-auto max-w-6xl px-6 pb-20">
+
+  <div class="grid items-center gap-10 md:grid-cols-2">
+
+    <img
+      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+      class="rounded-2xl shadow-xl"
+      alt="House"
+    />
+
+    <div>
+      <h2 class="font-head text-3xl font-bold">
+        Start Property Search Today
+      </h2>
+
+      <p class="mt-4 text-sm text-slate-600">
+        Get access to exclusive listings and market insights.
+        Begin your journey to finding the perfect home.
+      </p>
+
+      <button class="mt-6 rounded-lg border border-blue-600 px-6 py-3 font-semibold text-blue-600 hover:bg-blue-50">
+        Get UR Process
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-white py-6 text-center text-sm text-slate-500">
+  © <span id="year"></span> Delyrides Real Estate
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
