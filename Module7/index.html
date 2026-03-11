@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate – Landing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-slate-900">
+  <!-- NAV -->
+  <header class="border-b border-slate-100 bg-white">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <div class="flex items-center gap-8">
+        <a href="#" class="text-lg font-extrabold text-blue-700">Logo</a>
+        <nav class="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
+          <a class="hover:text-slate-900" href="#buy">Buy</a>
+          <a class="hover:text-slate-900" href="#rent">Rent</a>
+          <a class="hover:text-slate-900" href="#mortgage">Mortgage</a>
+        </nav>
+      </div>
+
+      <div class="hidden items-center gap-5 text-sm text-slate-600 md:flex">
+        <a class="hover:text-slate-900" href="#save">Save Home</a>
+        <a class="hover:text-slate-900" href="#saved">Saved Searches</a>
+        <a class="rounded-md bg-blue-600 px-4 py-2 text-xs font-semibold text-white hover:bg-blue-700" href="#login">
+          Sing up or Login
+        </a>
+      </div>
+
+      <button id="menuBtn"
+              class="md:hidden grid h-10 w-10 place-items-center rounded-lg border border-slate-200 hover:bg-slate-50"
+              aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden border-t border-slate-100 bg-white md:hidden">
+      <div class="mx-auto max-w-6xl px-4 py-4">
+        <div class="grid gap-3 text-sm font-medium text-slate-700">
+          <a href="#buy">Buy</a>
+          <a href="#rent">Rent</a>
+          <a href="#mortgage">Mortgage</a>
+          <a href="#save">Save Home</a>
+          <a href="#saved">Saved Searches</a>
+          <a class="mt-2 inline-flex justify-center rounded-md bg-blue-600 px-4 py-2 text-xs font-semibold text-white" href="#login">
+            Sing up or Login
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1600&q=80"
+        class="h-full w-full object-cover"
+        alt="Modern house"
+      />
+      <!-- blue overlay like screenshot -->
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-600/85 via-blue-600/55 to-blue-600/10"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
+      <div class="max-w-2xl text-white">
+        <h1 class="text-4xl font-extrabold leading-tight md:text-5xl">
+          Find Your <br />
+          <span class="text-white/90">Dream Home</span> <br />
+          By Us
+        </h1>
+
+        <p class="mt-4 max-w-xl text-sm leading-6 text-white/80">
+          Take a deep dive and browse homes for sale, original neighborhood photos, resident reviews
+          and local insights to find what is right for you.
+        </p>
+
+        <!-- Search bar row -->
+        <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <button class="w-full rounded-md bg-white/20 px-4 py-3 text-sm font-semibold text-white backdrop-blur hover:bg-white/25 sm:w-auto">
+            Schedule a call
+          </button>
+
+          <div class="flex w-full overflow-hidden rounded-md bg-white shadow-lg">
+            <button id="modeBtn"
+                    class="flex items-center gap-2 border-r border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100">
+              For Sell
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+
+            <div class="flex w-full items-center gap-2 px-4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-slate-400">
+                <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <input
+                id="searchInput"
+                class="w-full py-3 text-sm outline-none"
+                placeholder="Your Dream Home"
+              />
+            </div>
+          </div>
+        </div>
+
+        <p id="heroMsg" class="mt-3 hidden text-xs text-white/75">Demo: search submitted.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER STRIP -->
+  <section class="border-b border-slate-100 bg-white">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="grid gap-2 py-5 md:grid-cols-4">
+        <button class="filterBtn rounded-md px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50" data-filter="area">
+          Choose area
+        </button>
+
+        <button class="filterBtn rounded-md px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50" data-filter="status">
+          Property Status
+        </button>
+
+        <button class="filterBtn rounded-md bg-blue-600 px-4 py-3 text-sm font-semibold text-white hover:bg-blue-700" data-filter="type">
+          Property Type
+        </button>
+
+        <button class="filterBtn rounded-md px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50" data-filter="find">
+          Find Now
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="bg-[#f7f9fc]">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <h2 class="text-center text-3xl font-extrabold">What we do?</h2>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-4">
+        <!-- card -->
+        <div class="rounded-2xl bg-white p-6 text-center shadow-sm">
+          <div class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-slate-50 text-slate-900">
+            📡
+          </div>
+          <div class="mt-4 text-sm font-extrabold">Communication</div>
+          <p class="mt-2 text-xs leading-5 text-slate-600">
+            We'll help you estimate your budget range. Save to your buyer profile to help in your search.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-white p-6 text-center shadow-sm">
+          <div class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-slate-50 text-slate-900">
+            🛡️
+          </div>
+          <div class="mt-4 text-sm font-extrabold">Reliability</div>
+          <p class="mt-2 text-xs leading-5 text-slate-600">
+            We'll help you estimate your budget range. Save to your buyer profile to help in your search.
+          </p>
+        </div>
+
+        <!-- highlighted card -->
+        <div class="rounded-2xl bg-blue-200 p-6 text-center shadow-md">
+          <div class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-white text-slate-900">
+            ⚡
+          </div>
+          <div class="mt-4 text-sm font-extrabold">Quality Fast</div>
+          <p class="mt-2 text-xs leading-5 text-slate-700">
+            We'll help you estimate your budget range. Save to your buyer profile to help in your search.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-white p-6 text-center shadow-sm">
+          <div class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-slate-50 text-slate-900">
+            👨‍👩‍👧‍👦
+          </div>
+          <div class="mt-4 text-sm font-extrabold">Families</div>
+          <p class="mt-2 text-xs leading-5 text-slate-600">
+            We'll help you estimate your budget range. Save to your buyer profile to help in your search.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPLIT SECTION -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <div class="grid items-center gap-10 md:grid-cols-2">
+        <!-- image left -->
+        <div class="relative">
+          <div class="absolute -inset-6 rounded-[2.5rem] bg-slate-100 blur-2xl"></div>
+          <img
+            class="relative w-full rounded-3xl object-cover shadow-xl"
+            src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80"
+            alt="Bedroom"
+          />
+        </div>
+
+        <!-- text right -->
+        <div>
+          <h3 class="text-2xl font-extrabold md:text-3xl">
+            The Loading Real Estate <br />
+            Rental Marketplace
+          </h3>
+
+          <p class="mt-4 text-sm leading-6 text-slate-600">
+            We'll help you estimate your budget range. Save to your buyer profile to help in your search.
+          </p>
+
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-full bg-blue-100 text-blue-700">🏠</span>
+              <div class="text-sm font-bold">Smart Home</div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-full bg-blue-100 text-blue-700">🖥️</span>
+              <div class="text-sm font-bold">Beautiful Screen</div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-full bg-blue-100 text-blue-700">✨</span>
+              <div class="text-sm font-bold">Exceptional Life</div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-full bg-blue-100 text-blue-700">🔒</span>
+              <div class="text-sm font-bold">24/7 Security</div>
+            </div>
+          </div>
+
+          <div class="mt-7 rounded-xl border-l-4 border-blue-600 bg-blue-50 p-4 text-sm text-slate-700">
+            We'll help you estimate your budget range. Save to your buyer profile to help in your search.
+          </div>
+
+          <a href="#services"
+             class="mt-6 inline-flex rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-700">
+            Our Service
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAST SECTION: TEXT + STACKED IMAGES -->
+  <section class="bg-[#f7f9fc]">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <div class="grid items-center gap-10 md:grid-cols-2">
+        <!-- left -->
+        <div>
+          <h3 class="text-2xl font-extrabold md:text-3xl">We are ready to make your <br/>drim come true</h3>
+          <p class="mt-4 text-sm leading-6 text-slate-600">
+            Tulip is accused of helping Sheikh Hasina to broker a corrupt deal with Russia for Rooppur Power
+          </p>
+
+          <a href="#"
+             class="mt-6 inline-flex rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-700">
+            See More
+          </a>
+
+          <div class="mt-8 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-xl bg-blue-100 p-4 text-sm font-semibold text-slate-800">
+              Experience living in a developed city
+            </div>
+            <div class="rounded-xl bg-blue-100 p-4 text-sm font-semibold text-slate-800">
+              Great resale value
+            </div>
+            <div class="rounded-xl bg-blue-100 p-4 text-sm font-semibold text-slate-800">
+              The fate of a friendly neighbor
+            </div>
+            <div class="rounded-xl bg-blue-100 p-4 text-sm font-semibold text-slate-800">
+              Best decision at affordable price
+            </div>
+          </div>
+        </div>
+
+        <!-- right stacked images -->
+        <div class="relative">
+          <div class="absolute right-10 top-6 h-64 w-64 rounded-2xl bg-blue-200"></div>
+          <div class="absolute right-0 top-24 h-64 w-64 rounded-2xl bg-blue-300"></div>
+
+          <div class="relative ml-auto w-full max-w-md">
+            <img
+              class="relative z-10 w-full rounded-3xl object-cover shadow-xl"
+              src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80"
+              alt="House 1"
+            />
+            <img
+              class="relative z-0 -mt-12 ml-10 w-[88%] rounded-3xl object-cover shadow-xl"
+              src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80"
+              alt="House 2"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+</html>
