@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIXSHUVO – Real Estate Landing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* soft rounded outer container like screenshot */
+    .page-shell {
+      background: #eef1ef;
+    }
+    .card-shadow {
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+    }
+  </style>
+</head>
+
+<!-- class="page-shell text-slate-900" -->
+<body>
+    <!-- class="mx-auto max-w-5xl px-4 py-10" -->
+  <div >
+    <!-- Big rounded container -->
+    <div class="overflow-hidden rounded-[28px] bg-white card-shadow">
+      <!-- NAV -->
+      <header class="px-6 pt-6 md:px-10">
+        <div class="flex items-center justify-between">
+          <!-- brand -->
+          <a href="#" class="flex items-center gap-2 font-extrabold">
+            <span class="grid h-8 w-8 place-items-center rounded-full bg-amber-100 text-amber-700">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M3 12 12 5l9 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M6.5 11.5V20h11V11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="text-sm tracking-tight">UIXSHUVO</span>
+          </a>
+
+          <!-- center nav -->
+          <nav class="hidden items-center gap-6 text-xs font-semibold text-slate-600 md:flex">
+            <a class="hover:text-slate-900" href="#buy">Buy</a>
+            <a class="hover:text-slate-900" href="#rent">Rent</a>
+            <a class="hover:text-slate-900" href="#sell">Sell</a>
+            <a class="hover:text-slate-900" href="#agent">Find Agent</a>
+          </nav>
+
+          <!-- right -->
+          <div class="hidden items-center gap-6 text-xs font-semibold text-slate-600 md:flex">
+            <a class="hover:text-slate-900" href="#add">Add Property</a>
+            <a class="hover:text-slate-900" href="#about">About Us</a>
+            <a class="hover:text-slate-900" href="#join">Join</a>
+          </div>
+
+          <!-- mobile menu -->
+          <button id="menuBtn"
+            class="md:hidden grid h-10 w-10 place-items-center rounded-xl border border-slate-200 hover:bg-slate-50"
+            aria-label="Menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- mobile dropdown -->
+        <div id="mobileMenu" class="hidden pt-4 md:hidden">
+          <div class="grid gap-2 rounded-2xl border border-slate-100 bg-white p-4 text-sm font-semibold text-slate-700">
+            <a href="#buy">Buy</a>
+            <a href="#rent">Rent</a>
+            <a href="#sell">Sell</a>
+            <a href="#agent">Find Agent</a>
+            <div class="mt-2 h-px bg-slate-100"></div>
+            <a href="#add">Add Property</a>
+            <a href="#about">About Us</a>
+            <a href="#join">Join</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section class="px-6 pb-6 pt-6 md:px-10 md:pt-10">
+        <div class="grid gap-10 md:grid-cols-2 md:items-start">
+          <!-- Left text -->
+          <div class="relative">
+            <h1 class="text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
+              Connecting you <span class="text-slate-400 font-extrabold">to the</span><br />
+              home <span class="text-slate-900">you love</span>
+            </h1>
+
+            <!-- pills -->
+            <div class="mt-6 inline-flex items-center gap-2 rounded-full bg-slate-100 p-1">
+              <button class="modeBtn rounded-full px-4 py-2 text-xs font-bold text-slate-700 hover:bg-white" data-mode="Buy">Buy</button>
+              <button class="modeBtn rounded-full px-4 py-2 text-xs font-bold text-slate-700 hover:bg-white" data-mode="Rent">Rent</button>
+              <button class="modeBtn rounded-full bg-white px-4 py-2 text-xs font-bold text-slate-900 shadow-sm" data-mode="Sell">Sell</button>
+            </div>
+
+            <!-- search -->
+            <div class="mt-3 flex items-center gap-2 rounded-2xl border border-slate-200 bg-white p-2 shadow-sm">
+              <input
+                id="heroSearch"
+                class="w-full rounded-xl px-3 py-2 text-sm outline-none"
+                placeholder="Address, School, City or Market"
+              />
+              <button id="heroSearchBtn"
+                class="grid h-10 w-10 place-items-center rounded-xl bg-amber-400 text-slate-900 hover:bg-amber-300"
+                aria-label="Search">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="#111827" stroke-width="2"/>
+                  <path d="M16.5 16.5 21 21" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <p id="heroMsg" class="mt-2 hidden text-xs text-slate-500">
+              Demo: search submitted.
+            </p>
+
+            <!-- small quote card -->
+            <div class="mt-6 max-w-sm rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+              <div class="text-[11px] leading-5 text-slate-600">
+                “Turning your dreams into reality, one home at a time. Let us guide you to your perfect place.”
+              </div>
+            </div>
+          </div>
+
+          <!-- Right image + overlay cards -->
+          <div class="relative">
+            <div class="relative overflow-hidden rounded-[26px] bg-slate-100 shadow-xl">
+              <img
+                class="h-[320px] w-full object-cover md:h-[380px]"
+                src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1400&q=80"
+                alt="Modern House"
+              />
+              <!-- soft gradient -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/10"></div>
+
+              <!-- property card (bottom right like screenshot) -->
+              <div class="absolute bottom-4 right-4 w-[240px] rounded-2xl bg-white/95 p-3 shadow-lg backdrop-blur">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <div class="text-xs font-extrabold">Bismillah House</div>
+                    <div class="mt-1 text-[11px] leading-4 text-slate-500">
+                      Contemporary home featuring exceptional comfort and modern design.
+                    </div>
+                  </div>
+                  <span class="grid h-7 w-7 place-items-center rounded-full bg-amber-100 text-amber-700">★</span>
+                </div>
+
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-xs font-extrabold">USD 560,000</div>
+                  <div class="flex items-center gap-2">
+                    <button class="grid h-8 w-8 place-items-center rounded-xl border border-slate-200 hover:bg-slate-50" aria-label="Prev">
+                      ‹
+                    </button>
+                    <button class="grid h-8 w-8 place-items-center rounded-xl bg-amber-400 hover:bg-amber-300" aria-label="Next">
+                      ›
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- small orange dot button on edge -->
+            <div class="absolute -right-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-amber-400 shadow-lg md:-right-4">
+              <span class="h-2 w-2 rounded-full bg-white"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUSTED + FEATURES -->
+      <section class="px-6 pb-10 md:px-10">
+        <div class="grid gap-10 md:grid-cols-2 md:items-start">
+          <!-- Left: Trusted by -->
+          <div class="rounded-3xl bg-white p-2">
+            <div class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm">
+              <h2 class="text-2xl font-extrabold leading-tight">
+                Trusted by <br />
+                <span class="text-slate-400 font-extrabold">100 Million</span> buyers
+              </h2>
+
+              <p class="mt-3 max-w-md text-sm leading-6 text-slate-600">
+                Only we connect you directly to the person who knows the most about a property for sale:
+                the listing agent.
+              </p>
+
+              <!-- avatars -->
+              <div class="mt-6 flex items-center gap-3">
+                <div class="flex -space-x-3">
+                  <img class="h-9 w-9 rounded-full border-2 border-white object-cover"
+                       src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=100&q=80" alt="Avatar 1">
+                  <img class="h-9 w-9 rounded-full border-2 border-white object-cover"
+                       src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=100&q=80" alt="Avatar 2">
+                  <img class="h-9 w-9 rounded-full border-2 border-white object-cover"
+                       src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Avatar 3">
+                  <img class="h-9 w-9 rounded-full border-2 border-white object-cover"
+                       src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=100&q=80" alt="Avatar 4">
+                </div>
+                <div class="text-xs font-semibold text-slate-600">Join our community</div>
+              </div>
+
+              <!-- stats -->
+              <div class="mt-6 grid grid-cols-3 gap-4">
+                <div>
+                  <div class="text-sm font-extrabold">100M</div>
+                  <div class="text-[11px] text-slate-500">Happy buyers</div>
+                </div>
+                <div>
+                  <div class="text-sm font-extrabold">40M</div>
+                  <div class="text-[11px] text-slate-500">Client review</div>
+                </div>
+                <div>
+                  <div class="text-sm font-extrabold">4.6</div>
+                  <div class="text-[11px] text-slate-500">Positive rating</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: feature list -->
+          <div class="rounded-3xl border border-slate-100 bg-white p-4 shadow-sm">
+            <div class="space-y-3">
+              <button class="group flex w-full items-center justify-between gap-3 rounded-2xl border border-slate-100 bg-white p-4 text-left hover:bg-slate-50">
+                <div class="flex items-start gap-3">
+                  <span class="mt-0.5 grid h-9 w-9 place-items-center rounded-2xl bg-amber-100 text-amber-700">◎</span>
+                  <div>
+                    <div class="text-sm font-extrabold">Explore <span class="text-slate-400">great neighborhoods</span></div>
+                    <div class="mt-1 text-[11px] leading-5 text-slate-500">
+                      Explore videos, tours, in-depth research, and articles on 20,000 neighborhoods.
+                    </div>
+                  </div>
+                </div>
+                <span class="grid h-9 w-9 place-items-center rounded-2xl border border-slate-200 text-slate-400 group-hover:text-slate-700">→</span>
+              </button>
+
+              <button class="group flex w-full items-center justify-between gap-3 rounded-2xl border border-slate-100 bg-white p-4 text-left hover:bg-slate-50">
+                <div class="flex items-start gap-3">
+                  <span class="mt-0.5 grid h-9 w-9 place-items-center rounded-2xl bg-amber-100 text-amber-700">◎</span>
+                  <div>
+                    <div class="text-sm font-extrabold">Find highly <span class="text-slate-400">rated best property</span></div>
+                    <div class="mt-1 text-[11px] leading-5 text-slate-500">
+                      Find the very best schools with in-depth reviews and ratings from multiple experts.
+                    </div>
+                  </div>
+                </div>
+                <span class="grid h-9 w-9 place-items-center rounded-2xl border border-slate-200 text-slate-400 group-hover:text-slate-700">→</span>
+              </button>
+
+              <button class="group flex w-full items-center justify-between gap-3 rounded-2xl border border-slate-100 bg-white p-4 text-left hover:bg-slate-50">
+                <div class="flex items-start gap-3">
+                  <span class="mt-0.5 grid h-9 w-9 place-items-center rounded-2xl bg-amber-100 text-amber-700">◎</span>
+                  <div>
+                    <div class="text-sm font-extrabold">Discover <span class="text-slate-400">indoor quality buildings</span></div>
+                    <div class="mt-1 text-[11px] leading-5 text-slate-500">
+                      Learn about quality, amenities, layout, and smart-home upgrades that matter.
+                    </div>
+                  </div>
+                </div>
+                <span class="grid h-9 w-9 place-items-center rounded-2xl border border-slate-200 text-slate-400 group-hover:text-slate-700">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM CURVED SEARCH AREA -->
+      <section class="relative bg-[#f4f6f5] px-6 pb-10 pt-12 md:px-10">
+        <!-- curved top corners illusion -->
+        <div class="absolute left-0 top-0 h-10 w-full bg-white"></div>
+        <div class="absolute left-1/2 top-0 h-16 w-[92%] -translate-x-1/2 rounded-b-[28px] bg-[#f4f6f5]"></div>
+
+        <div class="relative">
+          <h3 class="text-center text-2xl font-extrabold">
+            Find your <span class="text-slate-400">dream</span> home
+          </h3>
+          <p class="mt-2 text-center text-xs text-slate-500">
+            Connecting you with the perfect property for your loved ones
+          </p>
+
+          <!-- Filter bar -->
+          <div class="mx-auto mt-8 flex max-w-4xl flex-col gap-3 rounded-2xl bg-white p-3 shadow-sm md:flex-row md:items-center">
+            <select class="w-full rounded-xl border border-slate-200 px-3 py-3 text-sm outline-none focus:border-amber-400 md:w-[18%]">
+              <option>Property</option>
+              <option>Apartment</option>
+              <option>Villa</option>
+              <option>Studio</option>
+            </select>
+
+            <select class="w-full rounded-xl border border-slate-200 px-3 py-3 text-sm outline-none focus:border-amber-400 md:w-[22%]">
+              <option>Location</option>
+              <option>Lagos</option>
+              <option>London</option>
+              <option>Dubai</option>
+            </select>
+
+            <input type="date"
+              class="w-full rounded-xl border border-slate-200 px-3 py-3 text-sm outline-none focus:border-amber-400 md:w-[18%]" />
+
+            <select class="w-full rounded-xl border border-slate-200 px-3 py-3 text-sm outline-none focus:border-amber-400 md:w-[18%]">
+              <option>Price</option>
+              <option>$100k – $300k</option>
+              <option>$300k – $600k</option>
+              <option>$600k+</option>
+            </select>
+
+            <button id="bottomSearchBtn"
+              class="w-full rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800 md:w-[18%]">
+              Search
+            </button>
+          </div>
+
+          <p id="bottomMsg" class="mx-auto mt-3 hidden max-w-4xl text-center text-xs text-slate-500">
+            Demo: filter search submitted.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
