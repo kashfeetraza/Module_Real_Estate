@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renovation – Landing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .shell { background: #cfcac4; }
+    .soft-shadow { box-shadow: 0 28px 70px rgba(15, 23, 42, 0.16); }
+  </style>
+</head>
+
+<!-- class="shell text-slate-900" -->
+<body>
+    <!-- class="mx-auto max-w-5xl px-4 py-10" -->
+  <div>
+    <!-- Main card -->
+    <div class="overflow-hidden rounded-[28px] bg-[#fbf7f2] soft-shadow">
+      <!-- NAV -->
+      <header class="px-6 pt-6 md:px-10">
+        <div class="flex items-center justify-between">
+          <!-- Logo / profile -->
+          <a href="#" class="flex items-center gap-3">
+            <img
+              class="h-9 w-9 rounded-full object-cover"
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80"
+              alt="Profile"
+            />
+            <span class="text-sm font-extrabold">Fitroombrony</span>
+          </a>
+
+          <!-- center nav -->
+          <nav class="hidden items-center gap-8 text-xs font-semibold text-slate-600 md:flex">
+            <a class="hover:text-slate-900" href="#home">Home</a>
+            <a class="hover:text-slate-900" href="#about">About</a>
+            <a class="hover:text-slate-900" href="#project">Project</a>
+            <a class="hover:text-slate-900" href="#social">Social</a>
+          </nav>
+
+          <!-- right buttons -->
+          <div class="flex items-center gap-2">
+            <a href="#gallery"
+               class="hidden rounded-full bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm ring-1 ring-slate-200 hover:bg-slate-50 md:inline-flex">
+              Get Quote
+            </a>
+            <a href="#pricing"
+               class="rounded-full bg-[#d3772f] px-4 py-2 text-xs font-semibold text-white hover:opacity-95">
+              Pricing
+            </a>
+
+            <button id="menuBtn"
+              class="md:hidden grid h-10 w-10 place-items-center rounded-xl border border-slate-200 hover:bg-white"
+              aria-label="Menu">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- mobile menu -->
+        <div id="mobileMenu" class="hidden pt-4 md:hidden">
+          <div class="grid gap-3 rounded-2xl border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-700">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#project">Project</a>
+            <a href="#social">Social</a>
+            <a href="#gallery" class="mt-2 inline-flex justify-center rounded-full bg-slate-900 px-4 py-2 text-xs font-semibold text-white">
+              Get Quote
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section id="home" class="px-6 pb-10 pt-8 md:px-10 md:pt-10">
+        <div class="grid gap-10 md:grid-cols-2 md:items-start">
+          <!-- left -->
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-[11px] font-semibold text-slate-600 ring-1 ring-slate-200">
+              <span class="text-[#d3772f]">●</span> Cozyly ad home
+            </div>
+
+            <h1 class="mt-5 text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
+              <span class="text-[#d3772f]">Transform</span> your <br />
+              Space with Expert <br />
+              Renovation Services
+            </h1>
+
+            <p class="mt-4 max-w-md text-sm leading-6 text-slate-600">
+              This goal transforms your life with graceful climate improvements and offers
+              better template to make creative improvements for your dream home.
+            </p>
+
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a href="#services"
+                 class="rounded-full bg-[#d3772f] px-6 py-3 text-sm font-semibold text-white hover:opacity-95">
+                Survey &amp; Results
+              </a>
+              <a href="#gallery"
+                 class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-800 ring-1 ring-slate-200 hover:bg-slate-50">
+                Award Consulting
+              </a>
+            </div>
+          </div>
+
+          <!-- right image -->
+          <div class="relative">
+            <div class="relative overflow-hidden rounded-[34px] bg-slate-100 shadow-xl">
+              <img
+                class="h-[320px] w-full object-cover md:h-[380px]"
+                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80"
+                alt="Living room"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MID SECTION -->
+      <section id="about" class="px-6 pb-12 md:px-10">
+        <div class="grid gap-8 md:grid-cols-2 md:items-start">
+          <!-- orange card -->
+          <div class="rounded-3xl bg-[#d3772f] p-7 text-white shadow-md">
+            <div class="text-sm font-extrabold">Architectour</div>
+            <div class="mt-1 text-xl font-extrabold leading-snug">
+              Sunw-Iir Fosqroel
+            </div>
+            <p class="mt-3 text-sm leading-6 text-white/85">
+              There are available solutions for your living lifestyle to elevate and
+              plan an modern design.
+            </p>
+
+            <a href="#contact"
+               class="mt-6 inline-flex items-center gap-2 rounded-full bg-white/15 px-5 py-2 text-xs font-semibold text-white hover:bg-white/20">
+              Request a Brochure <span>→</span>
+            </a>
+          </div>
+
+          <!-- Project Gallery list -->
+          <div id="gallery">
+            <h3 class="text-xl font-extrabold">Project Gallery</h3>
+
+            <div class="mt-5 space-y-4">
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 grid h-10 w-10 place-items-center rounded-2xl bg-white text-[#d3772f] ring-1 ring-slate-200">☕</span>
+                <div>
+                  <div class="text-sm font-extrabold">Aloma Teoq</div>
+                  <p class="mt-1 text-sm text-slate-600">
+                    Open new and modern planning &amp; smart seamless development.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 grid h-10 w-10 place-items-center rounded-2xl bg-white text-[#d3772f] ring-1 ring-slate-200">🛋️</span>
+                <div>
+                  <div class="text-sm font-extrabold">Tee Holary Ten Oquna</div>
+                  <p class="mt-1 text-sm text-slate-600">
+                    Create time-saving designs with the best quality improvements.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 grid h-10 w-10 place-items-center rounded-2xl bg-white text-[#d3772f] ring-1 ring-slate-200">🧱</span>
+                <div>
+                  <div class="text-sm font-extrabold">Nid In Tary Kole</div>
+                  <p class="mt-1 text-sm text-slate-600">
+                    Build new spaces for your home’s next-story transformations.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 grid h-10 w-10 place-items-center rounded-2xl bg-white text-[#d3772f] ring-1 ring-slate-200">🪴</span>
+                <div>
+                  <div class="text-sm font-extrabold">Tho Ogyin Perplogone</div>
+                  <p class="mt-1 text-sm text-slate-600">
+                    Enhance home design with modern aesthetics and practical layouts.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM CONTENT -->
+      <section id="services" class="px-6 pb-12 md:px-10">
+        <div class="grid gap-10 md:grid-cols-2 md:items-start">
+          <!-- left: big heading + paragraph + button -->
+          <div>
+            <h3 class="text-2xl font-extrabold">Architecturaz Perfections</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">
+              Make your dream renovation with a perfect balance of style and function.
+              We plan spaces, manage materials, and deliver quality results on time.
+            </p>
+            <a href="#pricing"
+              class="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-800 ring-1 ring-slate-200 hover:bg-slate-50">
+              Game Proof Messaging
+            </a>
+          </div>
+
+          <!-- right: two small cards -->
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+              <div class="flex items-center gap-3">
+                <span class="grid h-10 w-10 place-items-center rounded-2xl bg-[#fde6d6] text-[#d3772f]">✦</span>
+                <div class="text-sm font-extrabold">Client Reviews</div>
+              </div>
+              <p class="mt-3 text-sm text-slate-600">
+                Learn reviews of satisfied clients and see our proven reputation.
+              </p>
+              <button class="mt-5 rounded-full bg-[#fde6d6] px-4 py-2 text-xs font-semibold text-[#a95823] hover:opacity-90">
+                Request Review
+              </button>
+            </div>
+
+            <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+              <div class="flex items-center gap-3">
+                <span class="grid h-10 w-10 place-items-center rounded-2xl bg-[#fde6d6] text-[#d3772f]">⌁</span>
+                <div class="text-sm font-extrabold">Request a Quote</div>
+              </div>
+              <p class="mt-3 text-sm text-slate-600">
+                Request a quote instantly and receive an expert consultation.
+              </p>
+              <button class="mt-5 rounded-full bg-[#d3772f] px-4 py-2 text-xs font-semibold text-white hover:opacity-95">
+                Request Consulting
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer id="contact" class="bg-[#2e2e2e] text-white/80">
+        <div class="mx-auto grid max-w-5xl gap-8 px-6 py-10 md:grid-cols-4 md:px-10">
+          <div>
+            <div class="text-sm font-extrabold text-white">Throcodory</div>
+            <ul class="mt-4 space-y-2 text-xs">
+              <li><a class="hover:text-white" href="#">Getting Ideas</a></li>
+              <li><a class="hover:text-white" href="#">Learning</a></li>
+              <li><a class="hover:text-white" href="#">Crafts</a></li>
+              <li><a class="hover:text-white" href="#">Customized</a></li>
+              <li><a class="hover:text-white" href="#">Innovation</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="text-sm font-extrabold text-white">Category</div>
+            <ul class="mt-4 space-y-2 text-xs">
+              <li><a class="hover:text-white" href="#">Consulting</a></li>
+              <li><a class="hover:text-white" href="#">Renovation</a></li>
+              <li><a class="hover:text-white" href="#">Concept</a></li>
+              <li><a class="hover:text-white" href="#">Design</a></li>
+              <li><a class="hover:text-white" href="#">Campaign</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="text-sm font-extrabold text-white">By Service</div>
+            <ul class="mt-4 space-y-2 text-xs">
+              <li><a class="hover:text-white" href="#">Messaging</a></li>
+              <li><a class="hover:text-white" href="#">Consult Events</a></li>
+              <li><a class="hover:text-white" href="#">Coaching</a></li>
+              <li><a class="hover:text-white" href="#">Webdesign</a></li>
+              <li><a class="hover:text-white" href="#">Strategy</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="text-sm font-extrabold text-white">Library Mectlan</div>
+            <div class="mt-4 flex items-center gap-2">
+              <img class="h-8 w-8 rounded-full object-cover" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=100&q=80" alt="a1">
+              <img class="h-8 w-8 rounded-full object-cover" src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=100&q=80" alt="a2">
+              <img class="h-8 w-8 rounded-full object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="a3">
+            </div>
+            <p class="mt-4 text-xs text-white/70">
+              Subscribe for updates and renovation tips.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 px-6 py-5 text-center text-[11px] text-white/60 md:px-10">
+          © <span id="year"></span> Renovation Studio. All rights reserved.
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
